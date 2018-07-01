@@ -1,4 +1,4 @@
-# ChemicalEngineering
+# Chemical Engineering Thermodynamics - PPR1978 Equation of State
 User Defined Functions for multicomponent thermodynamic calculations of the Predictive Peng-Robinson 1978 Equation of State
 
 Clean VBA functions - no UI changes and no pop up messages. Use these functions in HMB workbooks.
@@ -9,6 +9,8 @@ Errors are reported in cell comments. When error clears then error comment also 
 3 - Optionally add FunctionReference.xlsx.
 4 - Save as xlsm.
 
+Optionally just download PData.xlsm or PPR1978_WorkedExamples.xlsm.
+
 Create a dataset and start calculations. Calculations can be made with or without binary interaction coefficients. User
 binary interaction coefficients or predictive binaries can be used in calculations.
 
@@ -16,9 +18,9 @@ Functions List:
 
 CreateDataset, CreateDecomposition (flatten these cells after creation to greatly improve calculation speed)
 
-FlashTP (vapor fractions or single phase component composition can be specified with Solver)
+FlashTP (vapor fractions or single phase component composition can be specified with Solver, constant enthalpy/entropy flashes can be accomplished with Solver)
 
-DewT, BubbleT (dew and bubble pressures calculated with DewT and BubbleT and Solver)
+DewT, BubbleT (dew and bubble pressures calculated with DewT and BubbleT by using Solver)
 
 Enthalpy - real & ideal gas mixtures
 
@@ -26,7 +28,7 @@ Entropy - real & ideal gas mixtures
 
 Cv - real & ideal gas mixtures
 
-Cp - real & ideal gas mixtures
+Cp - real, ideal gas mixtures and liquids
 
 Speed of Sound for real gas mixtures
 
