@@ -39,9 +39,9 @@ Attribute VB_Name = "ChemE_Functions"
 '1
 'Peng Robinson Equation of State
 'A New Two-Constant Equation of State
-'Ding-Yu Peng, Donald B. Robinson
-'Ind. Eng. Chem. Fundamen., 1976, 15 (1), pp 59–64
-'DOI:  10 0.1021 / i160057a011
+'Ding-Yu Peng,Â Donald B. Robinson
+'Ind. Eng. Chem. Fundamen.,Â 1976,Â 15Â (1), pp 59â€“64
+'DOI: Â 10 0.1021 / i160057a011
 'Publication Date: February 1976
 '
 '2
@@ -63,15 +63,15 @@ Attribute VB_Name = "ChemE_Functions"
 '
 '5
 'Bubble and Dew Point Routines adapted from:
-'It’s not as easy as it looks - Revisiting Peng–Robinson equation of state convergence issues for dew point, bubble point and flash calculations
+'Itâ€™s not as easy as it looks - Revisiting Pengâ€“Robinson equation of state convergence issues for dew point, bubble point and flash calculations
 '
 'Vamshi Krishna Kandula,(a) John C. Telotte (b) and F. Carl Knopf (corresponding author) (a)
 '(a) Chemical Engineering Department, Louisiana State University, USA
 'e -mail: cknopf@ southalabama.edu
-'(b) Chemical Engineering Department, Florida A&M University – Florida State University, USA
+'(b) Chemical Engineering Department, Florida A&M University â€“ Florida State University, USA
 '
-'International Journal of Mechanical Engineering Education, Volume 41, Number 3 (July 2013), © Manchester University Press
-' http://journals.sagepub.com/doi/pdf/10.7227/IJMEE.41.3.2
+'International Journal of Mechanical Engineering Education, Volume 41, Number 3 (July 2013), Â© Manchester University Press
+'Â http://journals.sagepub.com/doi/pdf/10.7227/IJMEE.41.3.2
 '
 '6
 'Cubic Equation VBA Code
@@ -111,7 +111,7 @@ Attribute VB_Name = "ChemE_Functions"
 '
 '12
 'Chemical Equilibrium by Gibbs Energy Minimization on Spreadsheets
-'Int. J. Engng Ed. Vol. 16, No. 4, pp. 335±339, 2000
+'Int. J. Engng Ed. Vol. 16, No. 4, pp. 335Â±339, 2000
 'Y.LWIN
 'Department of Chemical Engineering, Rangoon Institute of Technology, Insein P. O., Rangoon, Burma.
 'e -mail: ylwin@ yahoo.com
@@ -126,26 +126,26 @@ Attribute VB_Name = "ChemE_Functions"
 '14
 'VLE predictions with the Peng.Robinson equation of state and
 'temperature dependent kij calculated through a group contribution method
-'Jean-No¡§el Jaubert., Fabrice Mutelet
-'Laboratoire de Thermodynamique des Milieux Polyphas¢¥es, Institut National Polytechnique de Lorraine, Ecole Nationale Sup¢¥erieure des Industries
+'Jean-NoÂ¡Â§el Jaubert., Fabrice Mutelet
+'Laboratoire de Thermodynamique des Milieux PolyphasÂ¢Â¥es, Institut National Polytechnique de Lorraine, Ecole Nationale SupÂ¢Â¥erieure des Industries
 'Chimiques, 1rue Grandville, 54000 Nancy, France
 'Received 24 January 2004; accepted 25 June 2004
 
 '15
 'Prediction of Thermodynamic Properties of Alkyne-Containing
 'Mixtures with the E.PPR78 Model
-'Xiaochun Xu,õ Jean-Noe.l Jaubert,*,õ Romain Privat,õ and Philippe Arpentinierö
-'õEcole Nationale Supe.rieure des Industries Chimiques, Laboratoire Re.actions et Ge.nie des Proce.de.s (UMR CNRS 7274),
+'Xiaochun Xu,ÂÃµ Jean-Noe.l Jaubert,*,ÂÃµ Romain Privat,ÂÃµ and Philippe ArpentinierÂÃ¶
+'ÂÃµEcole Nationale Supe.rieure des Industries Chimiques, Laboratoire Re.actions et Ge.nie des Proce.de.s (UMR CNRS 7274),
 'Universite. de Lorraine, 1 rue Grandville, 54000 Nancy, France
-'öCentre de Recherche Paris Saclay, Air Liquide, 1 chemin de la porte des loges, BP 126, 78354 Jouy-en-Josas, France
+'ÂÃ¶Centre de Recherche Paris Saclay, Air Liquide, 1 chemin de la porte des loges, BP 126, 78354 Jouy-en-Josas, France
 
 '16
 'Efficient flash calculations for chemical process
-'design — extension of the Boston–Britt
-'‘‘Inside–out’’ flash algorithm to extreme
+'design â€” extension of the Bostonâ€“Britt
+'â€˜â€˜Insideâ€“outâ€™â€™ flash algorithm to extreme
 'conditions and new flash types
 'Vipul S. Parekh and Paul M. Mathias
-'Computers Chem. Engng Vol. 22, No. 10, pp. 1371—1380, 1998
+'Computers Chem. Engng Vol. 22, No. 10, pp. 1371â€”1380, 1998
 '( 1998 Published by Elsevier Science Ltd.
 'All rights reserved. Printed in Great Britain
 
@@ -276,10 +276,10 @@ Private Function calculate_T_BubDew_Est(dataset As Variant, moleComp() As Double
             On Error Resume Next
             'Not sure how to derive the Ki(i) estimating equation below. Need to contact the author as it's derivation is not presented in the referenced paper. Maybe it is only valid at the Dew and Bubble points. Check if it can be adopted for FlashTP.
             Ki(i) = dataset(i, iColumns.pc) ^ (((1 / T_Bub_Est - 1 / dataset(i, iColumns.tb)) / _
-            ((1 / dataset(i, iColumns.tc)) - (1 / dataset(i, iColumns.tb)))))                               'Ki etimate & Dew/Bubble point adapted from => It’s not as easy as it looks: revisiting Peng–Robinson equation of state convergence issues for dew point, bubble point and flash calculations
+            ((1 / dataset(i, iColumns.tc)) - (1 / dataset(i, iColumns.tb)))))                               'Ki etimate & Dew/Bubble point adapted from => Itâ€™s not as easy as it looks: revisiting Pengâ€“Robinson equation of state convergence issues for dew point, bubble point and flash calculations
             Ki(i) = Ki(i) / pbara                                                                           'Vamshi Krishna Kandula (a), John C. Telotteb (b) and F. Carl Knopf - E-mail: knopf@lsu.edu (a) (corresponding author)
                                                                                                             'a - Chemical Engineering Department, Louisiana State University, USA
-            If Err.Number = 6 Then           'This is an overflow error often caused by                     'b - Chemical Engineering Department, Florida A&M University – Florida State University, USA
+            If Err.Number = 6 Then           'This is an overflow error often caused by                     'b - Chemical Engineering Department, Florida A&M University â€“ Florida State University, USA
                 ReDim outputArray(1)         'dividing a number by a very small number
                 outputArray(0) = T_Bub_RoughEst_Temp
                 outputArray(1) = 1.1 * T_Bub_RoughEst_Temp
@@ -654,8 +654,8 @@ myErrorHandler:
         GoTo myErrorHandler
     End If
      
-    LiquidWaterViscM2BySec = -7.12697702590059 * 10 ^ -10 * TempC ^ 5 + 1.93812004157535 * 10 ^ -7 * TempC ^ 4 - 2.19695476816367E-05 * TempC ^ 3 + _
-    1.41020562534985E-03 * TempC ^ 2 - 6.00397258025756E-02 * TempC + 1.78642374134197
+    LiquidWaterViscM2BySec = (-7.12697702590059 * 10 ^ -10 * TempC ^ 5 + 1.93812004157535 * 10 ^ -7 * TempC ^ 4 - 2.19695476816367E-05 * TempC ^ 3 + _
+        1.41020562534985E-03 * TempC ^ 2 - 6.00397258025756E-02 * TempC + 1.78642374134197) * 10 ^ -6
     
     Call errorSub(UDF_Range, fcnName & " Warning: ", myErrorMsg, errMsgsOn)             '<=Used for warnings and to clear comments when errors are eliminated.
     
@@ -3101,12 +3101,12 @@ myErrorHandler:
 
     'range of TMN, TMX and Polynomual Coefficients index i ranges from 1 to 8 to match the Shomate equation coefficients A through H
     'Data for species can be added to the PData worksheet. NIST data is organized as follows:
-    'Cp° = A + B * T + C * T2 + D * t3 + E / T2
-    'H° - H°298.15= A*t + B*t2/2 + C*t3/3 + D*t4/4 - E/t + F - H
-    'S° = A * Ln(T) + B * T + C * T2 / 2 + D * t3 / 3 - E / (2 * T2) + g
+    'CpÂ° = A + B * T + C * T2 + D * t3 + E / T2
+    'HÂ° - HÂ°298.15= A*t + B*t2/2 + C*t3/3 + D*t4/4 - E/t + F - H
+    'SÂ° = A * Ln(T) + B * T + C * T2 / 2 + D * t3 / 3 - E / (2 * T2) + g
     'Cp = heat capacity (J/mol*K)
-    'H° = standard enthalpy (kJ/mol)
-    'S° = standard entropy (J/mol*K)
+    'HÂ° = standard enthalpy (kJ/mol)
+    'SÂ° = standard entropy (J/mol*K)
     'T = temperature(K) / 1000
     'uses TemK/1000 and calculates .
     'if NIST data is entered into the PData worksheet the column labeled '(CPDATA)' must contain 'NIST' to divide TempK by 1000
@@ -4518,8 +4518,8 @@ SkipSpecies:
     
 '    NIST Data (units for H & S are different)
 '    Cp = heat capacity (J/mol*K)
-'    H° = standard enthalpy (kJ/mol)
-'    S° = standard entropy (J/mol*K)
+'    HÂ° = standard enthalpy (kJ/mol)
+'    SÂ° = standard entropy (J/mol*K)
 '    t = temperature(k) / 1000
 
 '   HSC Data
@@ -4645,8 +4645,8 @@ SkipSpecies:
     
 '    NIST Data (units for H & S are different)
 '    Cp = heat capacity (J/mol*K)
-'    H° = standard enthalpy (kJ/mol)
-'    S° = standard entropy (J/mol*K)
+'    HÂ° = standard enthalpy (kJ/mol)
+'    SÂ° = standard entropy (J/mol*K)
 '    t = temperature(k) / 1000
 
 '   HSC Data
@@ -8506,8 +8506,8 @@ myErrorHandler:
                                                                         
 '    NIST Data (units for H & S are different)
 '    Cp = heat capacity (J/mol*K)
-'    H° = standard enthalpy (kJ/mol)
-'    S° = standard entropy (J/mol*K)
+'    HÂ° = standard enthalpy (kJ/mol)
+'    SÂ° = standard entropy (J/mol*K)
 '    t = temperature(k) / 1000
 
 '   HSC Data
@@ -8583,8 +8583,8 @@ myErrorHandler:
             
 '   NIST Data
 '    Cp = heat capacity (J/mol*K)
-'    H° = standard enthalpy (kJ/mol)
-'    S° = standard entropy (J/mol*K)
+'    HÂ° = standard enthalpy (kJ/mol)
+'    SÂ° = standard entropy (J/mol*K)
 '    t = temperature(k) / 1000
 
 '   HSC Data
@@ -8665,8 +8665,8 @@ myErrorHandler:
 
 '    NIST Data (units for H & S are different)
 '    Cp = heat capacity (J/mol*K)
-'    H° = standard enthalpy (kJ/mol)
-'    S° = standard entropy (J/mol*K)
+'    HÂ° = standard enthalpy (kJ/mol)
+'    SÂ° = standard entropy (J/mol*K)
 '    t = temperature(k) / 1000
 
 '   HSC Data
